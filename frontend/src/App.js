@@ -1,6 +1,7 @@
 // frontend/src/App.js
-import React from 'react';
+import React, { useState } from 'react';
 import Map from './components/Map';
+import Sidebar from './components/Sidebar';
 import './styles.css';
 
 const markers = [ // in Decimal degree (WGS84) 
@@ -10,9 +11,26 @@ const markers = [ // in Decimal degree (WGS84)
 ];
 
 function App() {
+  // Liste des catégories uniques
+  const categories = [...new Set(markers.map(m => m.type))];
+  // Par défaut, toutes sélectionnées
+  const [selectedCategories, setSelectedCategories] = useState(categories);
+
+  // Marqueurs filtrés selon la sélection
+  const filteredMarkers = markers.filter(m => selectedCategories.includes(m.type));
+
+
   return (
-    <div>
-      <Map markers={markers} />
+    <div style={{ display: 'flex' }}>
+      <Sidebar
+        markers={markers}
+        categories={categories}
+        selectedCategories={selectedCategories}
+        setSelectedCategories={setSelectedCategories}
+      />
+      <div style={{ flex: 1 }}>
+        <Map markers={filteredMarkers} />
+      </div>
     </div>
   );
 }
