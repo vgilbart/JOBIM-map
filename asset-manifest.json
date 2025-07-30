@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/JOBIM-map/static/css/main.09e2499d.css",
+    "main.js": "/JOBIM-map/static/js/main.cd1cc168.js",
+    "static/media/bretzel.png": "/JOBIM-map/static/media/bretzel.36b50a5939344c334c42.png",
+    "static/media/beer.png": "/JOBIM-map/static/media/beer.f9164b0e4edc7637b5f7.png",
+    "index.html": "/JOBIM-map/index.html",
+    "main.09e2499d.css.map": "/JOBIM-map/static/css/main.09e2499d.css.map",
+    "main.cd1cc168.js.map": "/JOBIM-map/static/js/main.cd1cc168.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09e2499d.css",
+    "static/js/main.cd1cc168.js"
+  ]
+}
